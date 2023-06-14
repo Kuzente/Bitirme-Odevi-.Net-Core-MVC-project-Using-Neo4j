@@ -1,8 +1,8 @@
 # Bitirme-Odevi-.Net-Core-MVC-project-Using-Neo4j
-Yapmış olduğum bitirme ödevimde .Net Core MVC mimarisi kullanarak bir web sitesi geliştirdim. Kullanıcıya sorulan 4 soru neticesinde gerekli ona enn uygun ürünler listelenerek sunulmaktadır.
+Bitirme ödevimde .NET Core MVC mimarisini kullanarak bir web sitesi geliştirdim. Kullanıcılara 4 soru sorularak, onlara en uygun ürünleri listelemeyi hedefledim.
 
-Ürün Ekleme işlemi Admin panelinden yapılıyor olup ilgili kodlar ile Python da oluşturduğum local deki API ye urun eklenmek istenen kategoriyi post ediyor ve ilgili kategoriye ait ürünler BeautifulSoup kutuphanesi kullanılarak bilinen bir E-ticaret sisteminden ürünler çekiliyor daha sonrasında çekilen bu ürünler bir json dosyasına yazılıyor ve .net tarafında GET ediliyor. Böylece istenildiği zaman güncel ürünler çekilip kullanıcıya sunulabiliyor.
+Ürün ekleme işlemi, admin paneli üzerinden gerçekleştiriliyor. Python tarafında oluşturduğum yerel API'ye, ürünün ekleneceği kategori POST isteğiyle gönderiliyor. Ardından, BeautifulSoup kütüphanesini kullanarak bilinen bir e-ticaret sitesinden ürünler çekiliyor ve bu ürünler bir JSON dosyasına yazılıyor. .NET tarafında ise bu dosya GET isteğiyle çekilerek kullanıcıya sunuluyor. Bu sayede istenildiğinde güncel ürünler çekilip kullanıcılara sunulabiliyor.
 
-Veritabanı olarak GraphDB tabanlı Neo4j teknolojisini kullanmayı tercih ettim. Böylelikle ilk defa bir projede Graf veritabanıyla çalışma fırsatı bulmuş oldum.
+Veritabanı olarak Neo4j tabanlı GraphDB teknolojisini tercih ettim. Bu sayede graf veritabanıyla çalışma fırsatı yakaladım ve projede farklı bir veritabanı deneyimi yaşadım.
 
-Projede birçok eksik var bunun sebebi bitirme ödevi olduğu için belirli bir tarihe yetişmesi gerekiyordu.Fırsat buldukça proje üzerinde hataların giderilmesi ve geliştirilmesi konusunda çalışmalarım devam edecektir.
+Proje, bir bitirme ödevi olduğu için zaman kısıtlamaları nedeniyle eksiklikler içerebilir. Ancak, fırsat buldukça projede hataları düzeltmek ve geliştirmeler yapmak için çalışmalarıma devam edeceğim.
