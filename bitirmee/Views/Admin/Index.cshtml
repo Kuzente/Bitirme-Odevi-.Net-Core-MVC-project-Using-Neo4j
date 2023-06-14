@@ -1,0 +1,80 @@
+﻿@using bitirmee.DTO;
+@{
+    Layout = "_AdminLayout";
+}
+@model AdminDto
+
+<section id="page-content" class="no-sidebar" >
+    <div class="container" >
+        <!--Kategori Listeleme-->
+        <div class="form-group">
+            <label>Kategori</label>
+            <form method="get" asp-controller="Admin" asp-action="GetByCategory">
+                <select class="form-select" id="category" name="category" required>
+                <option value="">Kategori Seçin</option>
+                @foreach (var item in Model.UrunluKategoris)
+                {
+                    <option>@item.adi</option>
+                }
+   
+            </select>
+            <button class="btn btn-primary mt-2">Listele </button>
+            </form>
+            <button class="btn btn-primary mt-2" onclick="window.location.href='https://localhost:7288/Admin'">Tüm Ürünleri Listele </button>
+        </div>
+        <!--Kategori Listeleme-->
+        <!--Ürünlerin Listelendiği DataTable-->
+        <div class="row">
+            <div class="col-sm-12">
+                <table id="datatable" class="table table-bordered table-hover dataTable" style=" font-size:smaller; table-layout:fixed; " cellpadding="0" cellspacing="0" role="grid" aria-describedby="datatable_info">
+                    <thead>
+                        <tr role="row" style="position:static;">
+                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Ürün Adı: activate to sort column ascending" style="width: 45%;">Ürün Adı</th>
+                            <th class="sorting_desc" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Ürün Markası: activate to sort column ascending" style="width: 5%;" aria-sort="descending">Ürün Markası</th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Ürün Linki: activate to sort column ascending" style="width: 10%;">Ürün Linki</th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Ürün Resim: activate to sort column ascending" style="width: 10%;">Ürün Resim</th>
+
+                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Ürün Fiyatı: activate to sort column ascending" style="width: 10%;">Ürün Fiyatı</th>
+                            
+                            <th class="noExport sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Actions: activate to sort column ascending" style="width: 10%;">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Uruns)
+                        {
+                            <tr role="row" class="odd" style="position:static;">
+                                <td class="sorting_1">@item.name</td>
+                                <td >@item.brand</td>
+                                <td><a href="@item.link">Ürün Linki</a></td>
+                                <td><a href="@item.image_url">Resim</a></td>
+                                <td>@item.price</td>
+                               
+                                <td>
+                                    <a class="ms-2 text-reset" href="#" data-bs-toggle="tooltip" data-bs-original-title="Edit"><i class="icon-edit"></i></a>
+                                    <a class="ms-2 text-reset" href="#" data-bs-toggle="tooltip" data-bs-original-title="Delete"><i class="icon-trash-2"></i></a>
+                                    <a class="ms-2 text-reset" href="#" data-bs-toggle="tooltip" data-bs-original-title="Settings"><i class="icon-settings"></i></a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th rowspan="1" colspan="1">Ürün Adı</th>
+                            <th rowspan="1" colspan="1">Ürün Markası</th>
+                            <th rowspan="1" colspan="1">Ürün Linki</th>
+                            <th rowspan="1" colspan="1">Ürün Resim</th>
+
+                            <th rowspan="1" colspan="1">Ürün Fiyatı</th>
+                            
+                            <th rowspan="1" colspan="1">Actions</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <!--Ürünlerin Listelendiği DataTable-->
+    </div>
+</section>
+
+
+

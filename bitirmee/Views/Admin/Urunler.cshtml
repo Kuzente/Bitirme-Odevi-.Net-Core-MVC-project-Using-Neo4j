@@ -1,0 +1,46 @@
+﻿@using bitirmee.DTO;
+
+@{
+    Layout = "_AdminLayout";
+}
+@model AdminDto
+<section id="page-content" class="no-sidebar">
+    <div class="container">
+        <div class="form-group">
+            <label>Kategori</label>
+            <form method="post" asp-controller="Admin" asp-action="UrunEkle" enctype="multipart/form-data">
+                <select class="form-select" id="category" name="category" required>
+                    <option value="">Ürün Eklemek İstediğiniz Kategoriyi Seçin</option>
+                    @foreach (var item in Model.UrunsuzKategoris)
+                    {
+                        <option>@item.adi</option>
+                    }
+
+                </select>
+                <div class="invalid-feedback">Lütfen Bir Kategori Seçiniz</div>
+                <div class="mb-3">
+                    
+                </div>
+                <button class="btn btn-success mt-2">Ürün Ekle </button>
+            </form>
+            
+        </div>
+        <div class="form-group">
+            <label>Kategori</label>
+            <form method="post" asp-controller="Admin" asp-action="UrunSil" enctype="multipart/form-data" >
+                <select class="form-select" id="category" name="category" required>
+                    <option value="">Ürünlerini Silmek İstediğiniz Kategoriyi Seçin</option>
+                    @foreach (var item in Model.UrunluKategoris)
+                    {
+                        <option>@item.adi</option>
+                    }
+                    
+                </select> 
+                <div class="invalid-feedback">Lütfen Bir Kategori Seçiniz</div>
+                <button class="btn btn-danger mt-2">Ürün Sil </button>
+            </form>
+
+        </div>
+    </div>
+
+</section>

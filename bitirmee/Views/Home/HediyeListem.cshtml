@@ -1,0 +1,84 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_Layout";
+}
+@model IEnumerable<Urun>
+
+<section id="page-title" class="text-light" style="background-image:url('/images/homepages/holidays/1.jpg');">
+    <div id="particles-dots" class="particles"></div>
+    <div class="bg-overlay" data-style="8"></div>
+    <div class="container">
+
+        <div class="page-title">
+            <h1>Alabileceğiniz Hediyeler Aşağıda Listelenmektedir</h1>
+            <span>Dileğiniz Ürüne Ulaşabilirsiniz</span>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        
+        <!--Product list-->
+        <div class="shop">
+            <div class="grid-layout grid-5-columns" data-item="grid-item">
+                @foreach (var item in Model)
+                {
+                    <div class="grid-item border" style="height:350px;" >
+                        <div class="product">
+                            <div class="product-image">
+                                <a href="@item.link">
+                                    <img alt="Shop product image!" src="@item.image_url">
+                                </a>
+                                
+                               
+                                
+                                <div class="product-overlay">
+                                    <a href="shop-product-ajax-page.html" data-lightbox="ajax">Göz At</a>
+                                </div>
+                            </div>
+                            <div class="product-description">
+                                <div class="product-category">@item.brand</div>
+                                <div class="product-title">
+                                    <h6 style="font-size:12px;line-height:10px;">
+                                        @if (item.name.Length > 20)
+                                        {
+                                            <a href="@item.link" title="@item.name">@item.name.Substring(0, 20)...</a>
+                                        }
+                                        else
+                                        {
+                                            <a href="@item.link">@item.name</a>
+                                        }
+                                    </h6>
+                                </div>
+                                <div class="product-price">
+                                    <ins>@item.price ₺</ins>
+                                </div>
+                               
+                                
+                            </div>
+                        </div>
+                    </div>
+                }
+                
+                
+            </div>
+            <hr class="space">
+            <!-- Pagination -->
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-left"></i></a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item active"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-right"></i></a></li>
+            </ul>
+            <!-- end: Pagination -->
+        </div>
+        <!--End: Product list-->
+    </div>
+</section>
+<!-- end: Shop products -->

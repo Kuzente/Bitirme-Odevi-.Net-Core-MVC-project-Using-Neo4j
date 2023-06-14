@@ -1,0 +1,49 @@
+﻿﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/plugins/datatables/datatables.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/css/plugins.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:15%">
+        <h3 class="w3-bar-item w3-black mt-0 mb-0" style="padding-bottom: 13.5px;">Admin Panel</h3>
+        <a class="w3-bar-item w3-button" asp-area="" asp-controller="Admin" asp-action="Index">Ana Sayfa</a>
+        <a class="w3-bar-item w3-button" asp-area="" asp-controller="Admin" asp-action="Urunler">Ürün Ekle/Sil</a>
+       
+
+    </div>
+    <!-- Page Content -->
+    <div style="margin-left:15%">
+        <div class="w3-container row" style="background-color: #c7cbde;">
+            <h1 class="col-10" style="color: #493293;">@ViewBag.Title </h1>
+            <div class="align-self-end text-center">
+                <h4>Hoşgeldin Admin</h4>
+                <a class="btn btn-dark mb-3" asp-controller="Home" asp-action="Index">Çıkış Yap</a>
+            </div>
+        </div>
+        <div>
+            @RenderBody()
+        </div>
+    </div>
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/plugins.js"></script>
+    <!--Template functions-->
+    <script src="~/js/functions.js"></script>
+    <script src="~/js/custom.js"></script>
+
+    <script src="~/plugins/datatables/datatables.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> 
+    
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+

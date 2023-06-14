@@ -1,0 +1,148 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\src\**" />
+    <Content Remove="wwwroot\src\**" />
+    <EmbeddedResource Remove="wwwroot\src\**" />
+    <None Remove="wwwroot\src\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\scss\base\_blog.scss" />
+    <None Include="wwwroot\scss\base\_comments.scss" />
+    <None Include="wwwroot\scss\base\_content.scss" />
+    <None Include="wwwroot\scss\base\_dashboard.scss" />
+    <None Include="wwwroot\scss\base\_extras.scss" />
+    <None Include="wwwroot\scss\base\_footer.scss" />
+    <None Include="wwwroot\scss\base\_forum.scss" />
+    <None Include="wwwroot\scss\base\_grid.scss" />
+    <None Include="wwwroot\scss\base\_header-extras.scss" />
+    <None Include="wwwroot\scss\base\_header.scss" />
+    <None Include="wwwroot\scss\base\_helpers.scss" />
+    <None Include="wwwroot\scss\base\_include.scss" />
+    <None Include="wwwroot\scss\base\_layout.scss" />
+    <None Include="wwwroot\scss\base\_menu.scss" />
+    <None Include="wwwroot\scss\base\_page-menu.scss" />
+    <None Include="wwwroot\scss\base\_page-title.scss" />
+    <None Include="wwwroot\scss\base\_portfolio.scss" />
+    <None Include="wwwroot\scss\base\_search.scss" />
+    <None Include="wwwroot\scss\base\_shop.scss" />
+    <None Include="wwwroot\scss\base\_side-panel.scss" />
+    <None Include="wwwroot\scss\base\_sidebar.scss" />
+    <None Include="wwwroot\scss\base\_sliders.scss" />
+    <None Include="wwwroot\scss\base\_topbar.scss" />
+    <None Include="wwwroot\scss\base\_typography.scss" />
+    <None Include="wwwroot\scss\base\_widgets.scss" />
+    <None Include="wwwroot\scss\components\_badge.scss" />
+    <None Include="wwwroot\scss\components\_breadcrumb.scss" />
+    <None Include="wwwroot\scss\components\_buttons.scss" />
+    <None Include="wwwroot\scss\components\_card.scss" />
+    <None Include="wwwroot\scss\components\_custom-forms.scss" />
+    <None Include="wwwroot\scss\components\_dropdown.scss" />
+    <None Include="wwwroot\scss\components\_figure.scss" />
+    <None Include="wwwroot\scss\components\_forms.scss" />
+    <None Include="wwwroot\scss\components\_grid.scss" />
+    <None Include="wwwroot\scss\components\_jumbotron.scss" />
+    <None Include="wwwroot\scss\components\_nav.scss" />
+    <None Include="wwwroot\scss\components\_navbar.scss" />
+    <None Include="wwwroot\scss\components\_pagination.scss" />
+    <None Include="wwwroot\scss\components\_paginations.scss" />
+    <None Include="wwwroot\scss\components\_reboot.scss" />
+    <None Include="wwwroot\scss\components\_scrolltotop.scss" />
+    <None Include="wwwroot\scss\components\_steps.scss" />
+    <None Include="wwwroot\scss\components\_text.scss" />
+    <None Include="wwwroot\scss\components\_transitions.scss" />
+    <None Include="wwwroot\scss\components\_type.scss" />
+    <None Include="wwwroot\scss\components\_utilities.scss" />
+    <None Include="wwwroot\scss\customization\fonts.css.map" />
+    <None Include="wwwroot\scss\customization\fonts.scss" />
+    <None Include="wwwroot\scss\customization\theme.css.map" />
+    <None Include="wwwroot\scss\customization\theme.scss" />
+    <None Include="wwwroot\scss\elements\_accordion-toggles.scss" />
+    <None Include="wwwroot\scss\elements\_alerts.scss" />
+    <None Include="wwwroot\scss\elements\_avatar.scss" />
+    <None Include="wwwroot\scss\elements\_background-image.scss" />
+    <None Include="wwwroot\scss\elements\_background-overlays.scss" />
+    <None Include="wwwroot\scss\elements\_blockquotes.scss" />
+    <None Include="wwwroot\scss\elements\_breadcrumbs.scss" />
+    <None Include="wwwroot\scss\elements\_buttons.scss" />
+    <None Include="wwwroot\scss\elements\_call-to-action.scss" />
+    <None Include="wwwroot\scss\elements\_cards.scss" />
+    <None Include="wwwroot\scss\elements\_carousel.scss" />
+    <None Include="wwwroot\scss\elements\_client-logos.scss" />
+    <None Include="wwwroot\scss\elements\_countdown-timers.scss" />
+    <None Include="wwwroot\scss\elements\_counters.scss" />
+    <None Include="wwwroot\scss\elements\_dropcat-highlight.scss" />
+    <None Include="wwwroot\scss\elements\_elements-extras.scss" />
+    <None Include="wwwroot\scss\elements\_floating-div.scss" />
+    <None Include="wwwroot\scss\elements\_headings.scss" />
+    <None Include="wwwroot\scss\elements\_horizontal-rules.scss" />
+    <None Include="wwwroot\scss\elements\_icon-boxes.scss" />
+    <None Include="wwwroot\scss\elements\_icons.scss" />
+    <None Include="wwwroot\scss\elements\_image-boxes.scss" />
+    <None Include="wwwroot\scss\elements\_include.scss" />
+    <None Include="wwwroot\scss\elements\_light-box.scss" />
+    <None Include="wwwroot\scss\elements\_lists.scss" />
+    <None Include="wwwroot\scss\elements\_maps.scss" />
+    <None Include="wwwroot\scss\elements\_modal.scss" />
+    <None Include="wwwroot\scss\elements\_nav-navbar.scss" />
+    <None Include="wwwroot\scss\elements\_pagination-pager.scss" />
+    <None Include="wwwroot\scss\elements\_parallax.scss" />
+    <None Include="wwwroot\scss\elements\_pie-charts.scss" />
+    <None Include="wwwroot\scss\elements\_pricing-tables.scss" />
+    <None Include="wwwroot\scss\elements\_progress-bars.scss" />
+    <None Include="wwwroot\scss\elements\_seperator.scss" />
+    <None Include="wwwroot\scss\elements\_shape-dividers.scss" />
+    <None Include="wwwroot\scss\elements\_social-icons.scss" />
+    <None Include="wwwroot\scss\elements\_tables.scss" />
+    <None Include="wwwroot\scss\elements\_tabs.scss" />
+    <None Include="wwwroot\scss\elements\_team-members.scss" />
+    <None Include="wwwroot\scss\elements\_testimonials.scss" />
+    <None Include="wwwroot\scss\elements\_text-rotator.scss" />
+    <None Include="wwwroot\scss\elements\_timeline.scss" />
+    <None Include="wwwroot\scss\elements\_tooltop-popover.scss" />
+    <None Include="wwwroot\scss\elements\_video-background.scss" />
+    <None Include="wwwroot\scss\elements\_wizard.scss" />
+    <None Include="wwwroot\scss\elements\_yt-player.scss" />
+    <None Include="wwwroot\scss\mixins\_alert.scss" />
+    <None Include="wwwroot\scss\mixins\_background-variant.scss" />
+    <None Include="wwwroot\scss\mixins\_badge.scss" />
+    <None Include="wwwroot\scss\mixins\_breakpoints.scss" />
+    <None Include="wwwroot\scss\mixins\_buttons.scss" />
+    <None Include="wwwroot\scss\mixins\_color.scss" />
+    <None Include="wwwroot\scss\mixins\_scrollbar.scss" />
+    <None Include="wwwroot\scss\mixins\_text.scss" />
+    <None Include="wwwroot\scss\plugins.scss" />
+    <None Include="wwwroot\scss\plugins\bootstrap-switch.scss" />
+    <None Include="wwwroot\scss\plugins\ion-range-slider.scss" />
+    <None Include="wwwroot\scss\plugins\pageloader.scss" />
+    <None Include="wwwroot\scss\style.scss" />
+    <None Include="wwwroot\scss\utilities\_background.scss" />
+    <None Include="wwwroot\scss\utilities\_color.scss" />
+    <None Include="wwwroot\scss\utilities\_section.scss" />
+    <None Include="wwwroot\scss\utilities\_sizing.scss" />
+    <None Include="wwwroot\scss\vendor\_bootstrap-datepicker.scss" />
+    <None Include="wwwroot\scss\vendor\_bootstrap-daterangepicker.scss" />
+    <None Include="wwwroot\scss\vendor\_bootstrap-notify.scss" />
+    <None Include="wwwroot\scss\vendor\_bootstrap-switch.scss" />
+    <None Include="wwwroot\scss\widgets\_links.scss" />
+    <None Include="wwwroot\scss\_bootstrap.scss" />
+    <None Include="wwwroot\scss\_components.scss" />
+    <None Include="wwwroot\scss\_mixins.scss" />
+    <None Include="wwwroot\scss\_utilities.scss" />
+    <None Include="wwwroot\scss\_variables.scss" />
+    <None Include="wwwroot\scss\_vendor.scss" />
+    <None Include="wwwroot\scss\_widgets.scss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Neo4jClient" Version="5.1.11" />
+  </ItemGroup>
+
+</Project>
